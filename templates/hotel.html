@@ -1,0 +1,334 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <title>Harry Guest House</title>
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/file.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/gallery.css' %}"> -->
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/cssgallery.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+    <!--header-->
+
+
+    <!--side navbar-->
+    <div class="sidenav" id="sidenav">
+        <span class="cancel-btn" id="cancel-btn">
+            <i class="fas fa-times"></i>
+        </span>
+
+        <ul class="navbar">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#services">Services</a></li>
+
+            <li><a href="#header">Gallery</a></li>
+
+
+            <li><a href="#header">Contact</a></li>
+            <li><a href="#aboutus">About us</a></li>
+        </ul>
+        <a href="login.html">
+            <button class="btn sign-up">sign up</button>
+            <button class="btn log-in">log in</button>
+        </a>
+    </div>
+
+
+    <div class="header" id="header">
+        <div class="head-top">
+            <div class="site-name">
+                <span>HarryGuestHouse</span>
+            </div>
+            <div class="site-nav">
+                <span id="nav-btn">MENU <i class="fas fa-bars"></i>
+                </span>
+            </div>
+        </div>
+        <div class="txt">
+            <div class="text">
+                <h2 style="color: rgb(5, 206, 196);"> We Treat Guest As God</h2>
+            </div>
+
+        </div>
+        <div class="mySlides fade">
+
+            <div class="numbertext"></div>
+            <img src="{% static 'banner-images/10.jpg' %}">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="{% static 'banner-images/9.jpg' %}">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="{% static 'banner-images/12.jpeg' %}">
+            <div class="text"></div>
+        </div>
+    </div>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <!-- end of side nav bar-->
+
+    <!--fullscreen modal-->
+    <div id="modal"></div>
+    <!--end of fullscreen modal-->
+
+    <!--body content-->
+    <section class="services sec-width" id="services">
+        <div class="title">
+            <h2>Services</h2>
+        </div>
+        <div class="services-container">
+            <!--single service-->
+
+            {% for service in services %}
+            <article class="service">
+
+                <div class="service-icon">
+                    <span>
+                        <i class="fas fa-{{service.Service_icon}}"></i>
+                    </span>
+                </div>
+                <div class="service-content">
+                    <h2>{{service.Service_name}}</h2>
+                    <p>{{service.Service_desc}}</p>
+                    <button type="button" class="btn">Know more</button>
+                </div>
+
+            </article>
+            {% endfor %}
+
+            <!--end of single service-->
+
+        </div>
+    </section>
+    <!--end of body content-->
+
+
+    <!--start of Booking page-->
+    <!-- <section class="rooms sec-width" id="room">
+        <div class="title">
+            <h2 style="color: purple;">Book Room</h2>
+        </div>
+        <div class="room-container"></div>
+    </section> -->
+    <div class="book">
+        <h2 style="color: rgb(39, 159, 207);">Book Room</h2><br>
+
+        <form class="book-form">
+            <div class="form-item">
+                <label for="checkin-date">Check In Date: </label>
+                <input type="date" id="checkin-date">
+            </div>
+            <div class="form-item">
+                <label for="checkout-date">Check Out Date: </label>
+                <input type="date" id="checkout-date">
+            </div>
+            <div class="form-item">
+                <label for="adult">Adults: </label>
+                <input type="number" min="1" value="1" id="adult">
+            </div>
+            <div class="form-item">
+                <label for="adult">Children(0-13): </label>
+                <input type="number" min="1" value="1" id="adult">
+            </div>
+            <div class="form-item">
+                <input type="submit" class="btn" value="Book Now">
+            </div>
+        </form>
+
+
+        <!--end of booking page-->
+
+        <section class="rooms sec-width" id="room">
+            <div class="title">
+
+            </div>
+            <div class="room-container"></div>
+        </section>
+
+        <!--end of body content-->
+
+        <!--footer-->
+        <br>
+        <footer class="footer" id="aboutus">
+            <div>
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Reprehenderit nulla, pariatur quibusdam
+                    dolores fugit repudiandae debitis atque autem
+                    dignissimos sit perspiciatis voluptates ea?</p>
+                <ul class="social-icons">
+                    <li class="flex">
+                        <i class="fa fa-twitter fa-2x"></i>
+                    </li>
+                    <li class="flex">
+                        <i class="fa fa-facebook fa-2x"></i>
+                    </li>
+                    <li class="flex">
+                        <i class="fa fa-instagram fa-2x"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Useful Links</h2>
+                <a href="#">Blog</a>
+                <a href="#">Rooms</a>
+                <a href="#">Subscription</a>
+                <a href="#">Gift Card</a>
+            </div>
+
+            <div>
+                <h2>Useful Links</h2>
+                <a href="#">Blog</a>
+                <a href="#">Rooms</a>
+                <a href="#">Subscription</a>
+                <a href="#">Gift Card</a>
+            </div>
+
+            <div>
+                <h2>Have a Question</h2>
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    <span>
+                        203 Mount Machhapuchre View, Lakeside, Pokhara, Nepal
+                    </span>
+                </div>
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-phone-alt" style="align-items: center;"></i>
+                    </span>
+                    <span>
+                        9846056804
+                        061-453900
+                    </span>
+                </div>
+                <div class="contact-item">
+                    <span>
+                        <i class="fas fa-envelop"></i>
+                    </span>
+                    <span>
+                        harry5847@gmail.com
+                    </span>
+                </div>
+
+            </div>
+        </footer>
+
+        <!-- For contact Page -->
+
+        <div class="contact-in">
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28128.385216613577!2d83.96595162009528!3d28.20584959325889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995951d4076205d%3A0x728f4e86fd77da60!2sHarry%20Guest%20House%EF%BC%86restaurant!5e0!3m2!1sen!2snp!4v1638871010481!5m2!1sen!2snp"
+                    width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="contact-form">
+                <h1 style="color:rgb(82, 48, 48)">Contact Us</h1>
+                <form>
+                    <input type="text" placeholder="Name" class="contact-form-txt" />
+                    <input type="text" placeholder="Email" class="contact-form-txt" />
+                    <textarea placeholder="Message" class="contact-form-textarea"></textarea>
+                    <input type="submit" name="Submit" class="contact-form-btn" />
+                </form>
+            </div>
+        </div>
+
+
+        <!-- end of contact us page -->
+
+        <!-- for Gallery Page -->
+
+
+        <div class="gallery">
+
+
+            <ul class="controls">
+                
+
+                <li class="buttons active" data-filter="all">
+                    all
+                </li>
+                {% for category in categories %}
+                <li class="buttons"data-filter={{category.name}}> 
+                <a href="?category={{category.name}}">
+                    {{category.name}}
+                </a>
+                        
+                 
+                </li>                
+                {% endfor %}
+
+            </ul>
+
+            {% for photo in photos %}
+            <div class="image-container">
+                <!-- Exterior ___________________  image cholocate -->
+                <!-- korean_food __________________ image juice -->
+                <!-- Rooms      ___________________ imafe ice-cream-->
+                <!-- Food __________________________ image_cake-->
+                <!-- other_services ___________________image_sandwich-->
+                
+
+                {% for category in categories %}
+                <a href="{{photo.image.url}}" class="image {{category.name}}">
+                    <img src="{{photo.image.url}}" alt="">
+                </a>
+                {% endfor category %}
+                
+                
+                
+                
+                
+                
+
+            </div>
+            {% empty %}
+            <h3>No Photos...</h3>
+            {% endfor photo %}
+            
+            
+            
+
+
+
+        <!-- jquery cdn link  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- magnific popup js cdn link  -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+        <script src="{% static 'js/slide.js' %}"></script>
+
+        <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
