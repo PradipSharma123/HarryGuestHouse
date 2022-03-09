@@ -18,32 +18,32 @@
                 setTimeout(showSlides, 3000); // Change image every 3 seconds
             }
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-        $('.buttons').click(function () {
+//         $('.buttons').click(function () {
 
-            $(this).addClass('active').siblings().removeClass('active');
+//             $(this).addClass('active').siblings().removeClass('active');
 
-            var filter = $(this).attr('data-filter')
+//             var filter = $(this).attr('data-filter')
 
-            if (filter == 'all') {
-                $('.image').show(400);
-            } else {
-                $('.image').not('.' + filter).hide(200);
-                $('.image').filter('.' + filter).show(400);
-            }
+//             if (filter == 'all') {
+//                 $('.image').show(400);
+//             } else {
+//                 $('.image').not('.' + filter).hide(200);
+//                 $('.image').filter('.' + filter).show(400);
+//             }
 
-        });
+//         });
 
-        $('.gallery').magnificPopup({
+//         $('.gallery').magnificPopup({
 
-            delegate: 'a',
-            type: 'image',
-            gallery: {
-                enabled: true
-            }
+//             delegate: 'a',
+//             type: 'image',
+//             gallery: {
+//                 enabled: true
+//             }
 
-        });
+//         });
 
-    });
+//     });
     // End of GAllery page
