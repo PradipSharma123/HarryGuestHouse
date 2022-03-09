@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 
 # from django's db package importing models module
@@ -14,3 +15,19 @@ class Service(models.Model):
 
     def __str__(self) -> str:
         return self.Service_name
+
+class Category(models.Model):
+    name = models.CharField(max_length=100, blank=False, null=False)
+
+    def __str__(self) -> str:
+        return self.name
+
+class Photo(models.Model):
+    category = models.ForeignKey(
+        Category, on_delete=models.SET_NULL, null=True, blank=True)
+    image = models.ImageField(upload_to = 'images', null=False, blank=False)
+    topic = models.CharField(max_length=30, default='Add topic here')
+
+    def __str__(self) -> str:
+        return self.topic
+

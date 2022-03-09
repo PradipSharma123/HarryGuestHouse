@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Service
+from . models import Service, Category, Photo
 
 # register the model in the admin section to manage
 # admin object which has attribute called site which is itself
@@ -7,5 +7,5 @@ from . models import Service
 # we call this method and passing model class as a argument
 
 admin.site.register(Service)  # service = argument / register = method
-# admin.site.register(Category)
-# admin.site.register(Photo)
+admin.site.register(Category)
+admin.site.register(Photo)
