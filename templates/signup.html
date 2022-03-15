@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Login Form</title>
+    <title>Register Form</title>
     <link rel="stylesheet" href="{% static '/css/login-signup.css'%}">
-	
+
     <!---we had linked our css file----->
 </head>
 
@@ -18,24 +18,25 @@
             </div>
             <nav>
                 <ul id='MenuItems'>
-                    
-                    
+
+
                 </ul>
             </nav>
         </div>
-        <div  class='login-page'>
+        <div class='login-page'>
             <div class="form-box">
                 <div class='button-box'>
                     <div id='btn'></div>
-                    <button type='button' class='toggle-btn'>Log In </button>
-                    <!-- <button type='button' onclick='register()' class='toggle-btn'>Register</button> -->
+                    <button type='button' class='toggle-btn'>Register</button>
                 </div>
-                <form action='/accounts/login/' method='post' id='form-grp' class='input-group-login'>
+                <form action="/accounts/register/" method="post"  id='form-grp' class='input-group-register'>
                     {% csrf_token %}
-                    <input type='text' name="username"  class='input-field' placeholder='Enter Username' required>
-                    <input type='password' name = "password" class='input-field' placeholder='Enter Password' required>
-                    <input type='checkbox' class='check-box'><span>Remember Password</span>
-                    <button type='submit' class='submit-btn'>Submit</button>
+                    <input type='text' name="fname" class='input-field' placeholder='First Name' required>
+                    <input type='text'  name="lname" class='input-field' placeholder='Last Name ' required>
+                    <input type='text' name="Username" class='input-field' placeholder='Username' required>
+                    <input type='password' name="password" class='input-field' placeholder='Enter Password' required>
+                    <input type='password' name="cpassword" class='input-field' placeholder='Confirm Password' required>
+                    <button type='submit' class='submit-btn'>Register</button>
                     <br>
                     {% for message in messages %}
                     <label>{{message}}</label>
@@ -45,9 +46,9 @@
         </div>
     </div>
     <!-- <script>
-         var x = document.getElementById('login');
-         var y = document.getElementById('register');
-         var z = document.getElementById('btn'); 
+        var x = document.getElementById('login');
+        var y = document.getElementById('register'); 
+        var z = document.getElementById('btn'); 
         function register() {
             x.style.left = '-400px';
             y.style.left = '50px';

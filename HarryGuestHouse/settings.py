@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'main',
     'booking',
+    'account',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -81,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'harryguesthousedb',
         'USER': 'root',
-        'PASSWORD': 'harry123',
+        'PASSWORD': 'pradip123',
         'PORT': 3306,
         'HOST': '127.0.0.1',
     }

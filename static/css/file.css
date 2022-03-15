@@ -243,7 +243,8 @@ header {
   padding-left: 12px;
 }
 .sign-up,
-.log-in {
+.log-in,
+.log-out {
   background: var(--yellow);
   color: #fff;
 }

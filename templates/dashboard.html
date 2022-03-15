@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <title>Harry Guest House</title>
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/file.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/gallery.css' %}"> -->
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/cssgallery.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+    <!--header-->
+
+
+    <!--side navbar-->
+    <div class="sidenav" id="sidenav">
+        <span class="cancel-btn" id="cancel-btn">
+            <i class="fas fa-times"></i>
+        </span>
+
+        <ul class="navbar">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#services">Services</a></li>
+
+            <li><a href="#header">Gallery</a></li>
+
+
+            <li><a href="#header">Contact</a></li>
+            <li><a href="#aboutus">About us</a></li>
+            {% if user.is_authenticated %}
+            <li>Hello, {{user.first_name}} </li>
+            <li><a href="{% url 'logout' %}">
+                <button class="btn log-out">log out</button>
+               </a>
+            </li>
+            {% else %}
+
+            <li>
+            <a href="{% url 'register' %}">
+                <button class="btn sign-up">sign up</button>
+            </a>
+            </li>
+            <li>
+            <a href="{% url 'login' %}">
+                <button class="btn log-in">log in</button>
+            </a>
+            </li>
+
+            {% endif %}
+            
+
+        </ul>
+       
+    </div>
+
+
+    <div class="header" id="header">
+        <div class="head-top">
+            <div class="site-name">
+                <span>HarryGuestHouse</span>
+            </div>
+            <div class="site-nav">
+                <span id="nav-btn">MENU <i class="fas fa-bars"></i>
+                </span>
+            </div>
+        </div>
+        <div class="txt">
+            <div class="text">
+                <h2 style="color: rgb(5, 206, 196);"> Welcome To Dashboard</h2>
+            </div>
+
+        </div>
+       
+
+
+                <!--footer-->
+                <br>
+                <br>
+                <br>
+                <footer class="footer" id="aboutus">
+                    <div>
+                        <h2>About Us</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Reprehenderit nulla, pariatur quibusdam
+                            dolores fugit repudiandae debitis atque autem
+                            dignissimos sit perspiciatis voluptates ea?</p>
+                        <ul class="social-icons">
+                            <li class="flex">
+                                <i class="fa fa-twitter fa-2x"></i>
+                            </li>
+                            <li class="flex">
+                                <i class="fa fa-facebook fa-2x"></i>
+                            </li>
+                            <li class="flex">
+                                <i class="fa fa-instagram fa-2x"></i>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div>
+                        <h2>Useful Links</h2>
+                        <a href="#">Blog</a>
+                        <a href="#">Rooms</a>
+                        <a href="#">Subscription</a>
+                        <a href="#">Gift Card</a>
+                    </div>
+                
+                    <div>
+                        <h2>Useful Links</h2>
+                        <a href="#">Blog</a>
+                        <a href="#">Rooms</a>
+                        <a href="#">Subscription</a>
+                        <a href="#">Gift Card</a>
+                    </div>
+                
+                    <div>
+                        <h2>Have a Question</h2>
+                        <div class="contact-item">
+                            <span>
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            <span>
+                                203 Mount Machhapuchre View, Lakeside, Pokhara, Nepal
+                            </span>
+                        </div>
+                        <div class="contact-item">
+                            <span>
+                                <i class="fas fa-phone-alt" style="align-items: center;"></i>
+                            </span>
+                            <span>
+                                9846056804
+                                061-453900
+                            </span>
+                        </div>
+                        <div class="contact-item">
+                            <span>
+                                <i class="fas fa-envelop"></i>
+                            </span>
+                            <span>
+                                harry5847@gmail.com
+                            </span>
+                        </div>
+                
+                    </div>
+                </footer>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- magnific popup js cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    
+    <script src="{% static 'js/slide.js' %}"></script>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
+
+
