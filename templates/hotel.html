@@ -23,6 +23,7 @@
 
 <body>
     <!--header-->
+    
 
 
     <!--side navbar-->
@@ -35,11 +36,12 @@
             <li><a href="#header">Home</a></li>
             <li><a href="#services">Services</a></li>
 
-            <li><a href="#header">Gallery</a></li>
+            <li><a href="#gallery">Gallery</a></li>
 
 
-            <li><a href="#header">Contact</a></li>
-            <li><a href="#aboutus">About us</a></li>
+            <li><a href="#contactus">Contact Us</a></li>
+
+            <li><a href="#aboutus">About Us</a></li>
         </ul>
         <a href="{% url 'register' %}">
             <button class="btn sign-up">sign up</button>
@@ -53,10 +55,21 @@
     <div class="header" id="header">
         <div class="head-top">
             <div class="site-name">
-                <span>HarryGuestHouse</span>
+                <span>HarryGuestHouse</span> 
+                
             </div>
+             
+            <button class="home:babe"><a href="#header">Home</a></button>
+            <button class="home:one"><a href="#services">Service</a></button>
+            <button class="home:two">Gallery</button>
+            <button class="home:three">Contact Us</button>
+            <button class="home:four"><a href="#aboutus">About us</a></button>
+
+            
+            <!-- <div class="home:one">Service</div> -->
             <div class="site-nav">
-                <span id="nav-btn">MENU <i class="fas fa-bars"></i>
+                
+                <span id="nav-btn"><i class="fas fa-bars"></i>MENU 
                 </span>
             </div>
         </div>
@@ -174,34 +187,16 @@
 
         <!--end of body content-->
 
-  
-       
-
-        <!-- For contact Page -->
-
-        <div class="contact-in">
-            <div class="contact-map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28128.385216613577!2d83.96595162009528!3d28.20584959325889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995951d4076205d%3A0x728f4e86fd77da60!2sHarry%20Guest%20House%EF%BC%86restaurant!5e0!3m2!1sen!2snp!4v1638871010481!5m2!1sen!2snp"
-                    width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div class="contact-form">
-                <h1 style="color:rgb(82, 48, 48)">Contact Us</h1>
-                <form>
-                    <input type="text" placeholder="Name" class="contact-form-txt" />
-                    <input type="text" placeholder="Email" class="contact-form-txt" />
-                    <textarea placeholder="Message" class="contact-form-textarea"></textarea>
-                    <input type="submit" name="Submit" class="contact-form-btn" />
-                </form>
-            </div>
-        </div>
-
 
         <!-- end of contact us page -->
 
         <!-- for Gallery Page -->
 
         <div class="gallery">
+            <div>
+                <h2>Gallery</h2>
+            </div>
+            
 
             <ul class="controls">
                 <li class="buttons active">
@@ -224,6 +219,30 @@
             </div>
         
         </div>
+        <br>
+        <br>
+
+        <!-- For contact Page -->
+        
+        <div class="contact-in">
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28128.385216613577!2d83.96595162009528!3d28.20584959325889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995951d4076205d%3A0x728f4e86fd77da60!2sHarry%20Guest%20House%EF%BC%86restaurant!5e0!3m2!1sen!2snp!4v1638871010481!5m2!1sen!2snp"
+                    width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="contact-form">
+                <h2 style="color:rgb(82, 48, 48)">Contact Us</h2>
+                <form>
+                    <input type="text" placeholder="Name" class="contact-form-txt" />
+                    <input type="text" placeholder="Email" class="contact-form-txt" />
+                    <div class="mess-age">
+                    <textarea placeholder="Message" class="contact-form-textarea"></textarea>
+                    </div>
+                    <input type="submit" name="Submit" class="contact-form-btn" />
+                </form>
+            </div>
+        </div>
+
                     <!--footer-->
         <br>
         <footer class="footer" id="aboutus">

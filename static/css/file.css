@@ -7,8 +7,8 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  /* padding: 0; */
+  /* margin: 0; */
   /* font-family: "Playfair Display", serif; */
 }
 /* body,
@@ -39,6 +39,7 @@ body {
   cursor: pointer;
   transition: var(--transition);
 }
+
 .btn:hover {
   opacity: 0.85;
 }
@@ -307,7 +308,7 @@ title {
 /* booking form */
 .book {
   background: linear-gradient(rgba(85, 36, 36, 0.45), rgba(0, 0, 0, 0.4)),
-    url("../banner-images/kaath.jpg") center/cover;
+    url("../banner-images/room.jpeg") center/cover;
   color: #fff;
   padding: 10px 60px;
 }
@@ -412,29 +413,40 @@ title {
 .contact-item span {
   display: block;
 }
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
   .footer-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
   }
+} */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
 }
-@media (min-width: 1570px) {
+/* @media (min-width: 1570px) {
   .footer {
     text-align: center;
-  }
-  .footer-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .footer-container div:nth-child(1) p {
-    padding-right: 20px;
-  }
-  .contact-item {
-    display: grid;
-    grid-template-columns: 10% 90%;
-    margin-bottom: 15px;
-    align-items: center;
-  }
+    margin-right: 50px;
+  } */
+.footer {
+  text-align: center;
+  margin-right: -60px;
+  margin-left: -60px;
+}
+.footer-container {
+  grid-template-columns: repeat(4, 1fr);
+  /* margin-right: 50px; */
+}
+.footer-container div:nth-child(1) p {
+  margin-right: 50px;
+}
+.contact-item {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin-bottom: 15px;
+  align-items: center;
 }
 
 .showModal {
