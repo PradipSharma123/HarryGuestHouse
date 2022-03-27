@@ -39,7 +39,7 @@
             <li><a href="#gallery">Gallery</a></li>
 
 
-            <li><a href="#contactus">Contact Us</a></li>
+            <li><a href="#contatus">Contact Us</a></li>
 
             <li><a href="#aboutus">About Us</a></li>
         </ul>
@@ -58,12 +58,17 @@
                 <span>HarryGuestHouse</span> 
                 
             </div>
-             
-            <button class="home:babe"><a href="#header">Home</a></button>
-            <button class="home:one"><a href="#services">Service</a></button>
-            <button class="home:two">Gallery</button>
-            <button class="home:three">Contact Us</button>
-            <button class="home:four"><a href="#aboutus">About us</a></button>
+
+
+        <div>
+            <div style="margin-right: 700px">
+            <button style=" color:rgb(225, 38, 231)" class="home:babe"><a href="#header">Home</a></button> &nbsp; &nbsp;
+            <button class="home:one"><a href="#services">Service</a></button>&nbsp; &nbsp;
+            <button class="home:two"><a href="#gallery">Gallery</a></button>&nbsp; &nbsp;
+            <button class="home:three"><a href="#contatus">Contact</a></button>&nbsp; &nbsp;
+            <button class="home:four"><a href="#aboutus">About us</a></button>&nbsp; &nbsp;
+            </div>
+        </div>
 
             
             <!-- <div class="home:one">Service</div> -->
@@ -76,6 +81,63 @@
         <div class="txt">
             <div class="text">
                 <h2 style="color: rgb(5, 206, 196);"> We Treat Guest As God</h2>
+                
+                    <style>
+                        siv {
+                            width: 100px;
+                            height: 50px;
+                            background-color: rgb(225, 38, 231);
+                            font-weight: bold;
+                            color: rgb(153, 253, 153);
+                            margin-right: 1500px;
+                            margin-bottom: 40px;
+                            position: relative;
+                            font-size: 40px;
+                            animation: mymove 4.5s infinite;
+                        }
+                
+                        #div1 {
+                            animation-timing-function: linear;
+                        }
+                
+                        #div2 {
+                            animation-timing-function: ease;
+                        }
+                
+                        #div3 {
+                            animation-timing-function: ease-in;
+                        }
+                
+                        #div4 {
+                            animation-timing-function: ease-out;
+                        }
+                
+                        #div5 {
+                            animation-timing-function: ease-in-out;
+                        }
+                
+                        @keyframes mymove {
+                            from {
+                                left: 0px;
+                            }
+                
+                            to {
+                                left: 200px;
+                            }
+                        }
+                    </style>
+                
+
+                
+                    <siv id="div1">Luxurious</siv><br>
+                    <siv id="div2">Place </siv><br>
+                    <!-- <siv id="div3"> </siv> <br> -->
+                    <siv id="div4">To</siv><br>
+                    <siv id="div5">Stay</siv><br>
+                
+                
+                
+                
             </div>
 
         </div>
@@ -192,9 +254,9 @@
 
         <!-- for Gallery Page -->
 
-        <div class="gallery">
+        <div class="gallery" id="gallery">
             <div>
-                <h2>Gallery</h2>
+                <h1 style="margin-left: 800px; color:black;">Gallery</h1>
             </div>
             
 
@@ -209,7 +271,7 @@
                 {% endfor %}
             </ul>
         
-            <div class="image-container">
+            <div  class="image-container">
                 {% for photo in photos %}
                 <a href="{{photo.image.url}}" class="image">
                     <img src="{{photo.image.url}}" alt="">
@@ -224,7 +286,7 @@
 
         <!-- For contact Page -->
         
-        <div class="contact-in">
+        <div class="contact-in" id = "contatus">
             <div class="contact-map">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28128.385216613577!2d83.96595162009528!3d28.20584959325889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995951d4076205d%3A0x728f4e86fd77da60!2sHarry%20Guest%20House%EF%BC%86restaurant!5e0!3m2!1sen!2snp!4v1638871010481!5m2!1sen!2snp"
@@ -233,15 +295,16 @@
             <div class="contact-form">
                 <h2 style="color:rgb(82, 48, 48)">Contact Us</h2>
                 <form>
-                    <input type="text" placeholder="Name" class="contact-form-txt" />
-                    <input type="text" placeholder="Email" class="contact-form-txt" />
+                    <input type="text" name="Contact_name" placeholder="Name" class="contact-form-txt" />
+                    <input type="text" name="Contact_email" placeholder="Email" class="contact-form-txt" />
                     <div class="mess-age">
-                    <textarea placeholder="Message" class="contact-form-textarea"></textarea>
+                    <textarea name="Contact_message" placeholder="message" class="contact-form-textarea"></textarea>
                     </div>
                     <input type="submit" name="Submit" class="contact-form-btn" />
                 </form>
             </div>
         </div>
+
 
                     <!--footer-->
         <br>

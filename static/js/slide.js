@@ -18,6 +18,9 @@
                 setTimeout(showSlides, 3000); // Change image every 3 seconds
             }
 
+
+
+
 // $(document).ready(function () {
 
 //         $('.buttons').click(function () {
