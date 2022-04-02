@@ -99,7 +99,7 @@ header {
 }
 
 .active {
-  background-color: #ec1dd1;
+  background-color: #b0aaaf;
 }
 
 /* Fading animation */
@@ -236,10 +236,9 @@ header {
   padding: 15px 0;
   display: block;
   border-bottom: 0.5px solid rgba(249, 211, 66, 0.3);
-  opacity: o.8;
-  letter-spacing: 1.5px;
-  transition: var(--transition);
+
 }
+
 .navbar li a:hover {
   padding-left: 12px;
 }
@@ -307,8 +306,6 @@ title {
 
 /* booking form */
 .book {
-  background: linear-gradient(rgba(85, 36, 36, 0.45), rgba(0, 0, 0, 0.4)),
-    url("../banner-images/room.jpeg") center/cover;
   color: #fff;
   padding: 10px 60px;
 }
